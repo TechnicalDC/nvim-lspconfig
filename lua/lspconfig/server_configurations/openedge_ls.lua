@@ -5,6 +5,8 @@ return {
     filetypes = { 'progress' },
     root_dir = util.root_pattern 'openedge-project.json',
     on_new_config = function(config)
+      print(config.cmd)
+      print(config.oe_jar_path)
       if not config.cmd and config.oe_jar_path then
         config.cmd = {
           'java',
